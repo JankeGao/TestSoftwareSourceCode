@@ -174,14 +174,20 @@ namespace Bussiness.Services
 
         public DataResult CreateStockEntity(Stock entity)
         {
-            //if (Stocks.Any(a => a.MaterialLabel == entity.MaterialLabel))
-            //{
-            //    return DataProcess.Failure(string.Format("物料条码{0}已存在", entity.MaterialLabel));
-            //}
-            if (StockRepository.Insert(entity))
+
+            var existingEntity = Stocks.FirstOrDefault(e => e.MaterialCode == entity.MaterialCode);
+            if (existingEntity != null)
+            {
+                existingEntity.Quantity += entity.Quantity;
+                existingEntity.ShelfTime = DateTime.Now;
+                StockRepository.Update(existingEntity);
+                return DataProcess.Success();
+            }
+            else if(StockRepository.Insert(entity))
             {
                 return DataProcess.Success(string.Format("库存{0}新增成功", entity.MaterialLabel));
             }
+
             return DataProcess.Failure();
         }
 

@@ -30,6 +30,10 @@ namespace DF.Web.Areas.BussinessApi.Controllers
         /// </summary>
         public Bussiness.Contracts.IInContract InContract { set; get; }
         public Bussiness.Contracts.IMaterialContract MaterialContract { set; get; }
+        /// <summary>
+        /// 物料库存
+        /// </summary>
+        public Bussiness.Contracts.IStockContract StockContract { set; get; }
 
         public Bussiness.Contracts.IWareHouseContract WareHouseContract { set; get; }
         // 供应商管理接口
@@ -91,7 +95,11 @@ namespace DF.Web.Areas.BussinessApi.Controllers
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, aa.ToMvcJson());
             return response;
         }
-
+        /// <summary>
+        /// 创建入库单
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         [LogFilter(Type = LogType.Operate, Name = "创建入库单")]
         [HttpPost]
         public HttpResponseMessage PostDoCreate(Bussiness.Entitys.In entity)
@@ -304,12 +312,15 @@ namespace DF.Web.Areas.BussinessApi.Controllers
                 int i = 0;
                 foreach (DataRow item in tb.Rows)
                 {
+
                     Bussiness.Entitys.InMaterial inmaterial = new Bussiness.Entitys.InMaterial();
+
                     inmaterial.BatchCode = item["批次"].ToString();
                     inmaterial.BillCode = inEntity.BillCode;
                     inmaterial.IsDeleted = false;
                     inmaterial.ItemNo = (i + 1).ToString().PadLeft(6, '0');
                     inmaterial.MaterialCode = item["物料编码"].ToString();
+
                     if (MaterialContract.Materials.FirstOrDefault(a => a.Code == inmaterial.MaterialCode) == null)
                     {
                         return Request.CreateResponse(HttpStatusCode.OK, DataProcess.Failure("物料编码:" + inmaterial.MaterialCode + "系统不存在").ToMvcJson());

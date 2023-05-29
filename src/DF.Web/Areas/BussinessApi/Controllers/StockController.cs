@@ -32,6 +32,9 @@ using NPOI.SS.Util;
 
 namespace DF.Web.Areas.BussinessApi.Controllers
 {
+    /// <summary>
+    /// 库存查看
+    /// </summary>
     [Description("库存查看")]
     public class StockController : BaseApiController
     {
@@ -44,7 +47,6 @@ namespace DF.Web.Areas.BussinessApi.Controllers
         public IWareHouseContract WareHouseContract { set; get; }
 
         public IRepository<Location, int> LocationDetailRepository { get; set; }
-
 
         public IMaterialContract MaterialContract { set; get; }
 
@@ -655,7 +657,9 @@ namespace DF.Web.Areas.BussinessApi.Controllers
                     entity.BatchCode= item["批次"].ToString();
                     entity.InDate = DateTime.Now.ToString("yyyy-MM-dd");
                     entity.ShelfTime = DateTime.Now;
+
                     StockContract.CreateStockEntity(entity);
+
                 }
                 StockContract.StockRepository.UnitOfWork.Commit();
                 return Request.CreateResponse(HttpStatusCode.OK,DataProcess.Success().ToMvcJson());

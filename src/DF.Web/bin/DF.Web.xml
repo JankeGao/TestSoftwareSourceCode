@@ -1449,10 +1449,22 @@
             入库数据库操作
             </summary>
         </member>
+        <member name="P:DF.Web.Areas.BussinessApi.Controllers.InController.StockContract">
+            <summary>
+            物料库存
+            </summary>
+        </member>
         <member name="M:DF.Web.Areas.BussinessApi.Controllers.InController.GetPageRecords(HP.Web.Mvc.Pagination.MvcPageCondition)">
             <summary>
             分页数据
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DF.Web.Areas.BussinessApi.Controllers.InController.PostDoCreate(Bussiness.Entitys.In)">
+            <summary>
+            创建入库单
+            </summary>
+            <param name="entity"></param>
             <returns></returns>
         </member>
         <member name="M:DF.Web.Areas.BussinessApi.Controllers.InController.GetInterfaceIn">
@@ -1934,6 +1946,11 @@
             导出历史出库信息
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:DF.Web.Areas.BussinessApi.Controllers.StockController">
+            <summary>
+            库存查看
+            </summary>
         </member>
         <member name="P:DF.Web.Areas.BussinessApi.Controllers.StockController.StockContract">
             <summary>

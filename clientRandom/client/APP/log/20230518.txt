@@ -1,0 +1,34 @@
+2023-05-18 10:00:04:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 10:00:54:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 14:44:05:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 15:06:44:捕获未处理异常:DialogHost is already open.
+2023-05-18 15:06:56:捕获未处理异常:DialogHost is already open.
+2023-05-18 15:06:56:捕获未处理异常:DialogHost is already open.
+2023-05-18 15:33:37:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 15:33:47:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 16:04:22:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 16:06:03:捕获未处理异常:配额不足，无法处理此命令。
+2023-05-18 16:06:03:捕获未处理异常:配额不足，无法处理此命令。
+2023-05-18 16:10:45:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 16:35:26:捕获未处理异常:无法对“wms.Client.ViewModel.ManualInViewModel”类型的只读属性“StartAutoRandomCommand”进行 TwoWay 或 OneWayToSource 绑定。
+2023-05-18 16:35:32:捕获未处理异常:无法对“wms.Client.ViewModel.ManualInViewModel”类型的只读属性“StartAutoRandomCommand”进行 TwoWay 或 OneWayToSource 绑定。
+2023-05-18 16:35:40:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 16:37:23:捕获未处理异常:无法对“wms.Client.ViewModel.ManualInViewModel”类型的只读属性“StartAutoRandomCommand”进行 TwoWay 或 OneWayToSource 绑定。
+2023-05-18 16:37:29:捕获未处理异常:无法对“wms.Client.ViewModel.ManualInViewModel”类型的只读属性“StartAutoRandomCommand”进行 TwoWay 或 OneWayToSource 绑定。
+2023-05-18 16:38:39:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 17:19:31:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 21:03:37:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
+2023-05-18 21:04:36:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:04:41:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:04:41:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:04:41:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:04:41:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:04:41:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:21:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:22:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:23:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:24:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:25:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:26:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 21:27:47:捕获未处理异常:DialogHost is already open.
+2023-05-18 22:46:40:捕获线程内未处理异常：未通过等待任务或访问任务的 Exception 属性观察到任务的异常。因此，终结器线程重新引发了未观察到的异常。
