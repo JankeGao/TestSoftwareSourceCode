@@ -42,7 +42,7 @@
                     </Setter>
                 </Style>
             </TabControl.ItemContainerStyle>
-            <TabItem Header="垂直学习" Visibility="Visible" FontSize="20" Margin="0,10,0,0">
+            <TabItem Header="垂直学习" Visibility="Collapsed" FontSize="20" Margin="0,10,0,0">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <!--<TextBlock x:Name="text" Text="{Binding ., StringFormat=当前正在进行 {0} 步}" Foreground="#957180" FontSize="14" Margin="0,0,0,20" />-->
               
@@ -102,7 +102,7 @@
                     </Grid>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="水平学习" Visibility="Visible" FontSize="20"  Margin="0,10,0,0">
+            <TabItem Header="水平学习" Visibility="Collapsed" FontSize="20"  Margin="0,10,0,0">
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <!--<TextBlock x:Name="text" Text="{Binding ., StringFormat=当前正在进行 {0} 步}" Foreground="#957180" FontSize="14" Margin="0,0,0,20" />-->
 

@@ -175,7 +175,7 @@ namespace Bussiness.Services
         public DataResult CreateStockEntity(Stock entity)
         {
 
-            var existingEntity = Stocks.FirstOrDefault(e => e.MaterialCode == entity.MaterialCode);
+            var existingEntity = Stocks.FirstOrDefault(e => e.MaterialCode == entity.MaterialCode && e.LocationCode == entity.LocationCode);
             if (existingEntity != null)
             {
                 existingEntity.Quantity += entity.Quantity;

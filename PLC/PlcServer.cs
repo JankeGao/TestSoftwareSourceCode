@@ -231,18 +231,20 @@ namespace PLCServer
                                 var M650Result = melsec_net.Write("M650", true);
                                 if (M650Result.IsSuccess)
                                 {
-                                    Thread.Sleep(SignalDelay);
-                                    M650Result = melsec_net.Write("M650", false);
-                                    if (!M650Result.IsSuccess)
+                                    Thread.Sleep(100);
+                                    var M650Ready = melsec_net.ReadBool("M650");
+                                    if (M650Ready.IsSuccess && M650Ready.Content)
                                     {
-                                        return DataProcess.Failure("M650置为OFF失败" + M650Result.Message);
+                                        var M651Result = melsec_net.Write("M651", true);
+                                        if (!M651Result.IsSuccess)
+                                        {
+                                            return DataProcess.Failure("M651置为ON失败" + M651Result.Message);
+                                        }
                                     }
 
-                                    var M651Result = melsec_net.Write("M651", true);
-                                    if (!M651Result.IsSuccess)
-                                    {
-                                        return DataProcess.Failure("M651置为ON失败" + M651Result.Message);
-                                    }
+
+
+
                                     //Thread.Sleep(SignalDelay);
 
                                     //M651Result = melsec_net.Write("M651", false);
@@ -2388,14 +2390,28 @@ namespace PLCServer
                     {
                         return DataProcess.Failure("启动失败:" + onLineResult.Message);
                     }
+
+                    //System.Threading.Thread.Sleep(100);
+                    //var onLineResultes = melsec_net.ReadBool("M650");
+                    //if (!onLineResultes.IsSuccess)
+                    //{
+                    //    return DataProcess.Failure("获取状态失败:" + onLineResult.Message);
+                    //}
+                    //else
+                    //{
+                    //    return DataProcess.Failure("PLC未连接");
+                    //}
+
                     System.Threading.Thread.Sleep(500);
                     onLineResult = melsec_net.Write("M650", false);
                     if (!onLineResult.IsSuccess)
                     {
                         return DataProcess.Failure("启动失败:" + onLineResult.Message);
                     }
-
-                    return DataProcess.Success();
+                    else
+                    {
+                        return DataProcess.Failure("PLC未连接");
+                    }
                 }
                 else
                 {

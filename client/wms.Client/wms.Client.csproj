@@ -456,6 +456,7 @@
     <Compile Include="Template\ToolbarContainer.xaml.cs">
       <DependentUpon>ToolbarContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UiCore\Converter\BooleanInvertConverter .cs" />
     <Compile Include="UiCore\VisualTargetPresentationSource.cs" />
     <Compile Include="UiCore\VisualWrapper.cs" />
     <Compile Include="ViewDlg\ContainerSettingDlg.cs" />

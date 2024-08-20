@@ -652,7 +652,6 @@ namespace PLCServer.Common
             client.BaseAddress = new Uri(url);
 
             client.Timeout = TimeSpan.FromSeconds(510);
-            string result = "";
             if (type.ToLower() == "put")
             {
                 HttpResponseMessage response;

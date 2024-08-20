@@ -8,10 +8,11 @@
          xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
         mc:Ignorable="d"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:converter="clr-namespace:wms.Client.UiCore.Converter"
-        Width="400" Height="220" >
+        xmlns:converter="clr-namespace:wms.Client.UiCore.Converter" xmlns:base="clr-namespace:wms.Client.ViewModel.Base" d:DataContext="{d:DesignInstance Type=base:DialogProcess}"
+             Width="400" Height="220" >
     <UserControl.Resources>
         <converter:VisibilityConverter x:Key="vis"/>
+        <converter:BooleanInvertConverter x:Key="BooleanInvertConverter" />
     </UserControl.Resources>
     <Grid>
         <Border Background="White">
@@ -35,14 +36,14 @@
                     <Button Content="取消" Background="#EDEDED" BorderBrush="#EDEDED"  materialDesign:ShadowAssist.ShadowDepth="Depth0"
                             Foreground="Black" Style="{StaticResource ResourceKey=SimpleButtonStyle}"
                             Margin="10 0 0 0"  Command="{x:Static wpf:DialogHost.CloseDialogCommand}" 
-                            Visibility="{Binding BtnHide,Converter={StaticResource vis}}">
+                            Visibility="{Binding BtnHide,Converter={StaticResource vis}}" IsEnabled="{Binding IsProcessing, Converter={StaticResource BooleanInvertConverter}}">
                         <Button.CommandParameter>
                             <system:Boolean>False</system:Boolean>
                         </Button.CommandParameter>
                     </Button>
                     <Button Content="确定" 
                             Style="{StaticResource ResourceKey=SimpleButtonStyle}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                            Margin="10 0 10 0" Command="{x:Static wpf:DialogHost.CloseDialogCommand}">
+                            Margin="10 0 10 0" Command="{Binding SaveCommand}" IsEnabled="{Binding IsProcessing, Converter={StaticResource BooleanInvertConverter}}" >
                         <Button.CommandParameter>
                             <system:Boolean>True</system:Boolean>
                         </Button.CommandParameter>

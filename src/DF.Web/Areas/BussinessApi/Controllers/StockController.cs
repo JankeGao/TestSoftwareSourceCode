@@ -596,7 +596,7 @@ namespace DF.Web.Areas.BussinessApi.Controllers
                         return Request.CreateResponse(HttpStatusCode.OK, DataProcess.Failure("物料编码:" + entity.MaterialCode + "未绑定库位").ToMvcJson());
                     }
                     entity.LocationCode = locationEntity.Code;
-                    //entity.locationcode = item["库存地址"].tostring();
+                    entity.LocationCode = item["库存地址"].ToString();
                     //var locationentity = warehousecontract.locations.firstordefault(a => a.code == entity.locationcode);
                     //if (locationentity == null)
                     //{

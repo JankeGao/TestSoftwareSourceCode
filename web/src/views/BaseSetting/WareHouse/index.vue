@@ -971,10 +971,10 @@
                 <el-button type="primary" @click="createBox">添加载具</el-button>
               </span>
               <span>
-                <el-button type="info" @click="moveInX">原点X轴平移</el-button>
+                <el-button type="info" @click="moveInX">托盘载重(500Kg)</el-button>
               </span>
               <span>
-                <el-button type="info" @click="moveInY">原点Y轴平移</el-button>
+                <el-button type="info" @click="moveInY">托盘运行速度(80%)</el-button>
               </span>
               <span style="color:red;font-size:20px">当前层:{{ CurTray }}</span>
             </div>
